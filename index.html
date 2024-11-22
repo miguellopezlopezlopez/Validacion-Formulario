@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src=script/script.js></script>
+     <title>Reserva de Citas</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Reserva de Citas</h2>
+      <form
+        name="formulario"
+        id="formulario"
+        action="#"
+        method="post"
+      >
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" minlength="3" maxlength="20" pattern="[a-zA-Z]+" required />
+        <div id="error-nombre" class="error-message"></div>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" minlength="3" maxlength="20" pattern="[a-zA-Z]+" required/>
+        <div id="error-apellidos" class="error-message"></div>
+
+        <label for="dni">Dni:</label>
+        <input type="text" name="dni" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required />
+        <div id="error-dni" class="error-message"></div>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" name="email" id="email" pattern=".+@dominio\.com" required/>
+        <div id="error-email" class="error-message"></div>
+
+        <label for="fecha_hora">Fecha y Hora:</label>
+        <input
+          type="datetime-local"
+          name="fecha_hora"
+          id="fecha_hora"
+          required
+        />
+
+        <label for="sexo">Sexo:</label>
+        <select name="sexo" id="sexo" required>
+          <option value="" disabled selected>Seleccione su sexo</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="motivo">Motivo de la Cita:</label>
+        <textarea name="motivo" id="motivo" rows="4"  maxlength="255" pattern="^[a-zA-Z0-9.,;() ]+$" required></textarea>
+        <div id="error-motivo" class="error-message"></div>
+
+        <input type="submit" id="submit" name="enviar" value="Reservar Cita" />
+        <input
+          type="button"
+          id="limpiar"
+          name="limpiar"
+          value="Limpiar Datos"
+        />
+      </form>
+    </div>
+  </body>
+</html>
