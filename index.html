@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src=script/script.js></script>
+    <script type="text/javascript" src="script/script.js"></script>
+
      <title>Reserva de Citas</title>
   </head>
 
@@ -18,19 +19,19 @@
         method="post"
       >
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" minlength="3" maxlength="20" pattern="[a-zA-Z]+" required />
+        <input type="text" name="nombre" id="nombre" minlength="3" maxlength="20" required />
         <div id="error-nombre" class="error-message"></div>
 
         <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" id="apellidos" minlength="3" maxlength="20" pattern="[a-zA-Z]+" required/>
+        <input type="text" name="apellidos" id="apellidos" minlength="3" maxlength="20"  required/>
         <div id="error-apellidos" class="error-message"></div>
 
-        <label for="dni">Dni:</label>
-        <input type="text" name="dni" id="dni" pattern="[0-9]{8}[A-Za-z]{1}" required />
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" id="dni"  required />
         <div id="error-dni" class="error-message"></div>
 
         <label for="email">Correo Electrónico:</label>
-        <input type="email" name="email" id="email" pattern=".+@dominio\.com" required/>
+        <input type="email" name="email" id="email"  required/>
         <div id="error-email" class="error-message"></div>
 
         <label for="fecha_hora">Fecha y Hora:</label>
